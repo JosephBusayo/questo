@@ -2,7 +2,24 @@
 .active{
   display: none
 }
-
+.todo-bar{
+  width: 30%;
+  height: 5px;
+  background-color: pink;
+  border-radius: 5px;
+}
+.wip-bar{
+  width: 60%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: yellow;
+}
+.done-bar{
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: greenyellow;
+}
 *{
   padding: 0;
   margin: 0;

@@ -52,8 +52,11 @@ export default function DND({data, handleUpdate}){
         }
         return 'card'
     }
-    
-
+    const progressBar = (title) => {
+        return(
+            title === data[0].title ? "todo-bar" : title === data[1].title ? "wip-bar" : "done-bar"
+        )
+    }
     return(
         <section className="table-wrapper">
             {list.map((grp, grpI) => (
@@ -73,7 +76,7 @@ export default function DND({data, handleUpdate}){
                             key={item}
                             className={dragging ? getStyles({grpI, itemI}) : "card"}
                         >
-                            <div className="bar"></div>
+                            <div className={progressBar(grp.title)}></div>
                             {item}
                         </div>
                     ))}

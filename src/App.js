@@ -5,18 +5,7 @@ import DND from './components/DragNDrop'
 
 
 function App() {
-  const [tasks, setTasks] = useState([])
 
-  useEffect(() =>{
-    fetch('https://www.getpostman.com/collections/8d61e2d32be36a3a80ec')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
-      })
-      .catch((error) => {
-        console.error(error.message)
-      })
-  })
   const [data, setData] = useState([
     {title: 'TODO', items: new Array()}, 
     {title: 'WIP', items: []},
